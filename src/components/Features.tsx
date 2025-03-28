@@ -1,11 +1,11 @@
 
 import { 
-  Brain, 
-  MessageSquare, 
-  Clock, 
-  Shield, 
-  Globe, 
-  Zap
+  Compass, 
+  PenTool, 
+  Home, 
+  Truck, 
+  Settings, 
+  Shield
 } from 'lucide-react';
 
 type FeatureProps = {
@@ -15,11 +15,11 @@ type FeatureProps = {
 };
 
 const FeatureCard = ({ icon, title, description }: FeatureProps) => (
-  <div className="feature-card">
-    <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-br from-chatbot-blue/10 to-chatbot-purple/10 text-chatbot-blue mb-4">
+  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+    <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-accent/10 text-accent mb-4">
       {icon}
     </div>
-    <h3 className="text-xl font-semibold mb-2">{title}</h3>
+    <h3 className="text-xl font-serif font-semibold mb-2 text-gray-800">{title}</h3>
     <p className="text-gray-600">{description}</p>
   </div>
 );
@@ -27,47 +27,45 @@ const FeatureCard = ({ icon, title, description }: FeatureProps) => (
 const Features = () => {
   const features = [
     {
-      icon: <Brain size={24} />,
-      title: "Advanced AI",
-      description: "Powered by cutting-edge language models for human-like understanding and responses.",
+      icon: <Compass size={24} />,
+      title: "Проектирование",
+      description: "Индивидуальное проектирование домов с учетом всех пожеланий и особенностей участка.",
     },
     {
-      icon: <MessageSquare size={24} />,
-      title: "Natural Conversations",
-      description: "Engage in fluid, contextual conversations that feel like chatting with a human assistant.",
+      icon: <PenTool size={24} />,
+      title: "Дизайн интерьера",
+      description: "Профессиональный дизайн интерьера, который идеально сочетается с архитектурой дома.",
     },
     {
-      icon: <Clock size={24} />,
-      title: "24/7 Availability",
-      description: "Get instant responses at any time of day, with no delays or waiting periods.",
+      icon: <Home size={24} />,
+      title: "Строительство",
+      description: "Строительство коттеджей с использованием современных технологий и материалов высшего качества.",
+    },
+    {
+      icon: <Truck size={24} />,
+      title: "Отделка",
+      description: "Премиальная внутренняя и внешняя отделка с использованием экологичных материалов.",
+    },
+    {
+      icon: <Settings size={24} />,
+      title: "Инженерные системы",
+      description: "Внедрение современных инженерных систем и технологий умного дома.",
     },
     {
       icon: <Shield size={24} />,
-      title: "Secure & Private",
-      description: "Your conversations stay private with enterprise-grade encryption and security protocols.",
-    },
-    {
-      icon: <Globe size={24} />,
-      title: "Multilingual Support",
-      description: "Communicate in over 50 languages with accurate translations and natural responses.",
-    },
-    {
-      icon: <Zap size={24} />,
-      title: "Continuous Learning",
-      description: "Our AI improves with each interaction, getting smarter and more helpful over time.",
+      title: "Гарантийное обслуживание",
+      description: "Гарантийное и постгарантийное обслуживание всех наших объектов.",
     },
   ];
 
   return (
-    <section id="features" className="section-padding bg-gray-50">
+    <section id="features" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Powerful Features for <span className="gradient-text">Powerful Results</span>
-          </h2>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-serif font-bold mb-4 text-gray-800">Наши услуги</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our AI chatbot combines cutting-edge technology with user-friendly design
-            to deliver exceptional conversational experiences.
+            Мы предлагаем полный спектр услуг в сфере строительства премиального жилья —
+            от разработки проекта до реализации под ключ.
           </p>
         </div>
 
